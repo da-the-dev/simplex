@@ -17,7 +17,3 @@ Please inspect the Git flow we use:
 - Ekaterina Zaitseva
 - Nika Chekhonina
 - Timofey Ivlenkov
-- 
-- 
-- 
-- 
