@@ -9,6 +9,10 @@ Please inspect the Git flow we use:
 - All the fix branches are marked with `x-<name-of-the-fix`.
 - Fixes and feature branches merge into `develop` first.
 
+### To compile
+- Run `cmake CMakeLists.txt && make all`
+- Find the executable in `build/bin/`
+
 **REPORT TODO!!!**
 
 # Worked on the project
