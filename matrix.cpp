@@ -1,5 +1,6 @@
 #include "matrix.h"
 #include <iostream>
+#include <istream>
 
 using namespace std;
 
@@ -8,6 +9,34 @@ Matrix::Matrix(int height, int width) : height(height), width(width) {
   for (int i = 0; i < height; i++) {
     matrix[i] = new double[width];
   }
+}
+
+double& Matrix::operator()(int row, int col) {
+  return matrix[row][col];
+}
+
+const double& Matrix::operator()(int row, int col) const {
+  return matrix[row][col];
+}
+
+ostream &operator<<(ostream &out, const Matrix &m) {
+  for (int i = 0; i < m.height; i++) {
+    for (int j = 0; j < m.width; j++) {
+      out << m(i, j);
+      if (j != m.width - 1)
+        out << " ";
+    }
+    out << endl;
+  }
+  return out;
+}
+
+istream &operator>>(istream &in, Matrix &m) {
+  for (int i = 0; i < m.height; i++)
+    for (int j = 0; j < m.width; j++)
+      in >> m(i, j);
+
+  return in;
 }
 
 Matrix Matrix::operator+(const Matrix &matrixEntity) const {
@@ -100,4 +129,3 @@ double Matrix::getValue(int i, int j) {
   double a = matrix[i][j];
   return (a);
 }
-

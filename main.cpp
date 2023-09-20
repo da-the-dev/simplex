@@ -7,13 +7,11 @@ using namespace std;
 using namespace std;
 
 int main() {
-  Matrix m(10, 10);;
+  Matrix m(10, 2);
 
-  m.matrix[0][0] = -100;
+  m(0, 1) = 1;
 
-  cout << m.matrix[0][0] << endl;
+  cout << m << endl;
 
   return 0;
-
-
 }
