@@ -10,8 +10,10 @@ Please inspect the Git flow we use:
 - Fixes and feature branches merge into `develop` first.
 
 ### To compile
-- Run `cmake CMakeLists.txt && make all`
-- Find the executable in `build/bin/`
+- Run `./make`
+
+To run: `build/bin/simplex`
+
 
 **REPORT TODO!!!**
 
