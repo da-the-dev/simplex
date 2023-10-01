@@ -21,5 +21,6 @@ To run: `build/bin/simplex`
 - Alexey Tkachenko
 - Alsu Khairullina
 - Ekaterina Zaitseva
+- Natalia Agapova
 - Nika Chekhonina
 - Timofey Ivlenkov
