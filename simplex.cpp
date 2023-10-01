@@ -1,5 +1,4 @@
 #include "matrix.h"
-#include <iostream>
 #include <istream>
 #include <cfloat>
 #include <iomanip>
@@ -104,25 +103,3 @@ void simplex(Matrix C, Matrix A, Matrix b, int approximation, int variables, int
     iteration(Table, basis, approximation);
 }
 
-int main() {
-    int variables;  // number of variables
-    int constraints;  // number of constraints
-    cin >> variables;
-    cin >> constraints;
-
-    Matrix C(1, variables);
-    cin >> C;
-
-    Matrix A(constraints, variables);
-    cin >> A;
-
-    Matrix b(constraints, 1);
-    cin >> b;
-
-    int approximation;
-    cin >> approximation;
-
-    simplex(C, A, b, approximation, variables, constraints);
-
-    return 0;
-}

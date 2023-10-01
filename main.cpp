@@ -1,17 +1,29 @@
 #include <iostream>
 
-using namespace std;
-
 #include "matrix.h"
+#include "simplex.h"
 
 using namespace std;
 
 int main() {
-  Matrix m(10, 2);
+    int variables;  // number of variables
+    int constraints;  // number of constraints
+    cin >> variables;
+    cin >> constraints;
 
-  m(0, 1) = 1;
+    Matrix C(1, variables);
+    cin >> C;
 
-  cout << m << endl;
+    Matrix A(constraints, variables);
+    cin >> A;
 
-  return 0;
+    Matrix b(constraints, 1);
+    cin >> b;
+
+    int approximation;
+    cin >> approximation;
+
+    simplex(C, A, b, approximation, variables, constraints);
+
+    return 0;
 }
