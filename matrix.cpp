@@ -99,17 +99,6 @@ void Matrix::operator=(const Matrix &matrixEntity) {
   }
 }
 
-// TODO: WTF???
-// Matrix T() const {
-//     Matrix matrixEntity(width, height);
-//     for (int i = 0; i < height; i++) {
-//         for (int j = 0; j < width; j++) {
-//             matrixEntity.matrix[j][i] = this->matrix[i][j];
-//         }
-//     }
-//     return matrixEntity;
-// }
-
 void Matrix::permute(int first, int second) {
   if (first < height && second < height) {
   }
