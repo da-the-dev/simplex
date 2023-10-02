@@ -1,17 +1,33 @@
 #include <iostream>
-
-using namespace std;
-
 #include "matrix.h"
+#include "simplex.h"
 
 using namespace std;
 
 int main() {
-  Matrix m(10, 2);
+    cout << "Enter the number of variables and the number of constraints:" << endl;
+    int variables;  // number of variables
+    int constraints;  // number of constraints
+    cin >> variables;
+    cin >> constraints;
 
-  m(0, 1) = 1;
+    cout << "Enter the C matrix:" << endl;
+    Matrix C(1, variables);
+    cin >> C;
 
-  cout << m << endl;
+    cout << "Enter the A vector (objective function):" << endl;
+    Matrix A(constraints, variables);
+    cin >> A;
 
-  return 0;
+    cout << "Enter the b vector (right-hand side):" << endl;
+    Matrix b(constraints, 1);
+    cin >> b;
+
+    cout << "Enter the approximation accuracy (as in std::setprecision):" << endl;
+    int approximation;
+    cin >> approximation;
+
+    simplex(C, A, b, approximation, variables, constraints);
+
+    return 0;
 }

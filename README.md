@@ -14,8 +14,13 @@ Please inspect the Git flow we use:
 
 To run: `build/bin/simplex`
 
+## Some instructions
+1. Enter the number of variables and the number of constraints equations
+2. Enter the contraint matrix C 
+3. Enter the objective function coefficients A
+4. Enter the "right-hand side" value b
+5. Enter the approximation accuracy (same format as in `setprecision()`)
 
-**REPORT TODO!!!**
 
 # Worked on the project
 - Alexey Tkachenko
